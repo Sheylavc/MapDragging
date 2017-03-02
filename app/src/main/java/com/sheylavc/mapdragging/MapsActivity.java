@@ -61,33 +61,13 @@ public class MapsActivity extends FragmentActivity implements
     private static final String TAG = MapsActivity.class.getName();
 
 
-
-
     // Códigos de petición
     int PERMISSION_CODE_1 = 23;
-    public static final int REQUEST_LOCATION = 1;
     public static final int REQUEST_CHECK_SETTINGS = 2;
 
     private static final String LOCATION_KEY = "location-key";
 
     private TrackGPS gps;
-
-
-
-//    public static final CameraPosition BONDI =
-//            new CameraPosition.Builder().target(new LatLng(-11.8930656,-76.8825468))
-//                    .zoom(15.5f)
-//                    .bearing(300)
-//                    .tilt(50)
-//                    .build();
-//
-//    public static final CameraPosition CLIENTE =
-//            new CameraPosition.Builder().target(new LatLng(-33.87365, 151.20689))
-//                    .zoom(15.5f)
-//                    .bearing(0)
-//                    .tilt(25)
-//                    .build();
-
 
     private GoogleMap mMap;
     private TextView markerText;
@@ -283,19 +263,12 @@ public class MapsActivity extends FragmentActivity implements
         mLastLocation = new LatLng(currentCameraPosition.target.latitude, currentCameraPosition.target.longitude);
 
         updateLocationUI();
-//        CameraPosition currentCameraPosition = mMap.getCameraPosition();
-//        Address.setText(currentCameraPosition.target.latitude + " / "+ currentCameraPosition.target.longitude);
 
  }
 
 
 
     private void updateLocationUI() {
-
-//        CameraPosition currentCameraPosition = mMap.getCameraPosition();
-//        Address.setText(currentCameraPosition.target.latitude + " / "+ currentCameraPosition.target.longitude);
-
-//        Address.setText(String.valueOf(mLastLocation.latitude) + " / "+String.valueOf(mLastLocation.longitude));
         Address.setText(getAddress(this));
 
     }
